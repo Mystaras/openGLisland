@@ -10,7 +10,7 @@ exec: $(OUTPUT)
 	rm -f src/*.o
 	
 $(OUTPUT): $(OBJ)
-	$(CC) $(CFLAGS) -o $(OUTPUT) $(OBJ) $(LIBS)
+	$(CC) $(CFLAGS) -o $(OUTPUT) $^ $(LIBS)
 
 main.o: src/main.c include/dessiner.h
 	$(CC) -c $(CFLAGS) $<
